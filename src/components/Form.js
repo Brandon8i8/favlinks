@@ -8,9 +8,6 @@ const Form = (props) => {
     const { name, value } = event.target;
     if (name === 'name') setName(value);
     if (name === 'URL') setURL(value);
-    /*
-            TODO - Logic for changing state based on form changes
-        */
   }
 
   const onFormSubmit = (event) => {
@@ -19,9 +16,6 @@ const Form = (props) => {
     props.handleSubmit({ name, URL });
     setName('');
     setURL('');
-    /*
-            TODO - Logic for calling props to handle submission and setting state changes
-        */
   }
 
   return (
@@ -31,7 +25,6 @@ const Form = (props) => {
       <label htmlFor="URL">URL:</label>
       <input type="text" name="URL" value={URL} onChange={handleChange} />
       <button type="submit">Add Link</button>
-      {/* TODO - Logic for returning a form element with labels and inputs for link name and URL */}
     </form>
   )
 }
